@@ -4,12 +4,12 @@
   "description": "Automation challenge for WizeLine",
   "main": "",
   "scripts": {
-    "test:chrome": "testcafe chrome ./testcafe.challenge/tests/",
-    "test:firefox": "testcafe firefox ./testcafe.challenge/tests/",
-    "test:safari": "testcafe safari ./testcafe.challenge/tests/",
-    "test:reports": "testcafe chrome ./testcafe.challenge/tests/ --reporter html:reports/html/`date +%Y-%m-%m`/report.html",
-    "test:reports-allBrowsers": "testcafe all ./testcafe.challenge/tests/ --reporter html:reports/html/`date +%Y-%m-%d_%H:%M:%S`/report.html",
-    "test:chrome-headless": "testcafe chrome:headless ./testcafe.challenge/tests/ --reporter html:reports/html/`date +%Y-%m-%d_%H:%M:%S`.html"
+    "test:chrome": "testcafe chrome ./tests/",
+    "test:firefox": "testcafe firefox ./tests/",
+    "test:safari": "testcafe safari ./tests/",
+    "test:reports": "testcafe chrome ./tests/ --reporter html:reports/html/`date +%Y-%m-%m`/report.html",
+    "test:reports-allBrowsers": "testcafe all ./tests/ --reporter html:reports/html/`date +%Y-%m-%d_%H:%M:%S`/report.html",
+    "test:chrome-headless": "testcafe chrome:headless ./tests/ --reporter html:reports/html/`date +%Y-%m-%d_%H:%M:%S`.html"
   },
   "repository": {
     "type": "git",

@@ -6,7 +6,9 @@ class productListing{
         this.plpTitle = Selector('.title');
     }
 
-    async returnPLPtitle(){
+    async returnPLPtitle() {
         return await this.plpTitle.innerText;
     }
 }
+
+export default new productListing();

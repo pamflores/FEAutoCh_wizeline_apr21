@@ -13,8 +13,8 @@ class loginpage{
     //***METHODS***
 
     //Login to the page 
-    async loginMethod (user,password){
-        await t.typeText(this.username_txtbox,username)
+    async loginMethod(user,password){
+        await t.typeText(this.username_txtbox,user)
         .typeText(this.password_txtbox,password)
         .click(this.login_btn)
 
