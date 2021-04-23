@@ -24,6 +24,7 @@ class loginpage{
     async getErrorMsg(){
         return await this.error_msg.innerText
     }
+
     
 }
 

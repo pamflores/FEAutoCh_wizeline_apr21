@@ -3,6 +3,8 @@ import roles from '../data/roles';
 import loginpage from '../pages/loginPage';
 import productListing from '../pages/plp';
 import {CREDENTIALS} from '../data/credentials';
+import common from '../pages/common';
+import {Selector,t} from 'testcafe';
 
 fixture `Testing Login`
     .page(PAGE.URL);
@@ -21,5 +23,6 @@ test(`Logout`, async t => {
     //await t.useRole(roles.validUser) //Login with valid user with roles
     await loginpage.loginMethod(CREDENTIALS.STANDARD_USER.USERNAME, CREDENTIALS.STANDARD_USER.PASSWORD)
     await t.expect(await productListing.returnPLPtitle()).eql(PAGE.PAGETITLES.PRODUCT) //Verify user is logged in
-    // TO DO: Insert here the logout code
+    await common.logout()
+    await t.expect(loginpage.login_btn).ok()
 });
