@@ -25,6 +25,9 @@ class loginpage{
         return await this.error_msg.innerText
     }
 
+    async existsLoginBtn(){
+        return await this.login_btn.exists;
+    }
     
 }
 

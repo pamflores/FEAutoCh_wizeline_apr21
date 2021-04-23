@@ -24,5 +24,5 @@ test(`Logout`, async t => {
     await loginpage.loginMethod(CREDENTIALS.STANDARD_USER.USERNAME, CREDENTIALS.STANDARD_USER.PASSWORD)
     await t.expect(await productListing.returnPLPtitle()).eql(PAGE.PAGETITLES.PRODUCT) //Verify user is logged in
     await common.logout()
-    await t.expect(loginpage.login_btn).ok()
+    await loginpage.existsLoginBtn().ok()
 });

@@ -14,11 +14,16 @@ class productListing{
 
     async sortBy(option){
         await t.click(this.sortCombo)
-                .click(Selector('option', { text: option }))
+                .click((new selectOption(option).option))
     }
 
     async firstProduct(){
         return await this.firstProd.innerText;
+    }
+}
+class selectOption {
+    constructor(option) {
+        this.option = Selector('option', { text: option })
     }
 }
 
