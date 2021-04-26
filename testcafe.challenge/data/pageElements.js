@@ -7,7 +7,7 @@ export const PAGE = {
     URL: process.env.URL,
 
     PAGETITLES: {
-        PRODUCT: "PRODUCTS",
+        PRODUCTLIST: "PRODUCTS",
         YOUR_CART: "YOUR CART",
         OVERVIEW: "CHECKOUT: OVERVIEW"
   },
@@ -23,7 +23,12 @@ export const PAGE = {
     },
     PRODUCTS:{
         ONESIE: "Sauce Labs Onesie",
-        LIGHT: "Sauce Labs Bike Light"
+        LIGHT: "Sauce Labs Bike Light",
+        BACKPACK: "Sauce Labs Backpack"
+    },
+    BUTTONS:{
+        ADDTOCART: "ADD TO CART",
+        REMOVE: "REMOVE"
     }
     
 }
