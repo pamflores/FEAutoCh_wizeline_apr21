@@ -1,5 +1,6 @@
 import {Selector, t} from 'testcafe';
 import {PAGE} from '../data/pageElements';
+import productDetails from '../pages/pdp';
 
 class productListing{
 
@@ -8,6 +9,7 @@ class productListing{
         this.sortCombo = Selector('.product_sort_container');
         this.firstProd = Selector('.inventory_list').nth(0);
         this.productLink = Selector('.inventory_item_name');
+        this.cart = Selector ('.shopping_cart_link');
     }
 
     async returnPLPtitle() {
@@ -26,6 +28,15 @@ class productListing{
     async selectProduct(product){
         await t.click(this.productLink.withText(product));
     }
+
+    async goToCart(){
+        await t.click(this.cart)
+    }
+    async addItemToCart(prod){
+        this.selectProduct(prod)
+        await productDetails.addItemToCart()
+        await t.expect(await productDetails.returnBtnText()).eql(PAGE.BUTTONS.REMOVE)
+    }
 }
 
 class selectOption {
@@ -33,10 +44,8 @@ class selectOption {
         this.option = Selector('option', { text: option })
     }
 }
-class openPDP{
-    contstructor(product){
-        this.productLink = Selector((this.productLink).withText(product));
-    }
-}
+    
+
+
 
 export default new productListing();

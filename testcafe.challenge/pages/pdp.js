@@ -1,4 +1,6 @@
 import {Selector, t} from 'testcafe';
+import productListing from '../pages/plp';
+import {PAGE} from '../data/pageElements';
 
 class productDetails{
     
@@ -22,7 +24,9 @@ class productDetails{
     
     async returntoPLP(){
         await t.click(this.backtoPLP)
+        await t.expect(await productListing.returnPLPtitle()).eql(PAGE.PAGETITLES.PRODUCTLIST)
     }
 }
+
 
 export default new productDetails();

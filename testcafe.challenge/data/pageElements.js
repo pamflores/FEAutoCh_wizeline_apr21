@@ -24,7 +24,7 @@ export const PAGE = {
     PRODUCTS:{
         ONESIE: "Sauce Labs Onesie",
         LIGHT: "Sauce Labs Bike Light",
-        BACKPACK: "Sauce Labs Backpack"
+        BACKPACK: "Sauce Labs Backpack",
     },
     BUTTONS:{
         ADDTOCART: "ADD TO CART",
