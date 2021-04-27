@@ -5,6 +5,7 @@ class common{
     constructor(){
         this.burgerbtn = Selector('#react-burger-menu-btn');
         this.burgerlogout = Selector('#logout_sidebar_link');
+        this.cartbtn = Selector('.shopping_cart_link');
     }
 
     async clickBurguerBtn(){
@@ -18,6 +19,11 @@ class common{
     async logout(){
         await this.clickBurguerBtn();
         await this.clickLogoutLink();
+    }
+
+
+    async openCart(){
+        await t.click(this.cartbtn);
     }
 
   
