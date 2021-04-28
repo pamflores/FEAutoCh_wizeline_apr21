@@ -29,7 +29,16 @@ export const PAGE = {
     BUTTONS:{
         ADDTOCART: "ADD TO CART",
         REMOVE: "REMOVE"
+    },
+    LABELS:{
+        PAYMENT: "SauceCard #31337"
+    },
+    NAMES:{
+        FIRST_NAME: "John",
+        LAST_NAME: "Smith",
+        POSTAL_CODE: "90210"
     }
+
     
 }
 
