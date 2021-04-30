@@ -9,6 +9,7 @@ class checkoutNames{
         this.zipCodeText = Selector('#postal-code');
         this.continueBtn = Selector('#continue');
         this.shippingLbl = Selector('.summary_value_label');
+        this.finishBtn = Selector('#finish');
     }
 
     async addNames(first,last,zip){
@@ -20,6 +21,9 @@ class checkoutNames{
     }
     async returnShippingLbl(){
         return await this.shippingLbl.innerText;
+    }
+    async finish(){
+        await t.click(this.finishBtn)
     }
 }
 

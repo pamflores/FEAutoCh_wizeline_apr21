@@ -31,7 +31,8 @@ export const PAGE = {
         REMOVE: "REMOVE"
     },
     LABELS:{
-        PAYMENT: "SauceCard #31337"
+        PAYMENT: "SauceCard #31337",
+        THANK_YOU: "THANK YOU FOR YOUR ORDER"
     },
     NAMES:{
         FIRST_NAME: "John",

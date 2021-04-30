@@ -6,7 +6,7 @@ import {PAGE} from '../data/pageElements';
 import productDetails from '../pages/pdp';
 import common from '../pages/common';
 import shoppingCart from '../pages/shoppingCart';
-import checkoutNames from '../pages/checkoutNames';
+
 
 
 fixture `Product Details Page Testing`
@@ -27,10 +27,3 @@ test(`Verify Products were added to the Cart`, async t => {
     await t.expect(await shoppingCart.isItemInTheCart(PAGE.PRODUCTS.ONESIE)).eql(true) 
 });
 
-test(`Add Names to Checkout`, async t => {
-    await common.openCart()
-    await shoppingCart.clickCheckoutbtn()
-    await checkoutNames.addNames(PAGE.NAMES.FIRST_NAME,PAGE.NAMES.LAST_NAME,PAGE.NAMES.POSTAL_CODE)
-    await t.expect(await checkoutNames.returnShippingLbl()).eql(PAGE.LABELS.PAYMENT)
-    //TO DO: Check that Cart is in 0
-});
