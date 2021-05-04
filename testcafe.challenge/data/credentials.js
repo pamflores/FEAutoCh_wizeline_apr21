@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+//Constant credentials to be used throughout the tests
 export const CREDENTIALS = {
   STANDARD_USER: {
     USERNAME: process.env.VALIDUSER,

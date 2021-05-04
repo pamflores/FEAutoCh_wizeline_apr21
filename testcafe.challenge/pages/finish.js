@@ -6,7 +6,6 @@ class Finish{
        this.finishLbl = Selector(".complete-header")
     }
 
-
     async returnFinishLbl(){
         return await this.finishLbl.innerText;
     }

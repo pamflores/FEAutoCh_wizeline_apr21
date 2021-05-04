@@ -3,6 +3,7 @@ import {PAGE} from '../data/pageElements';
 import {CREDENTIALS} from '../data/credentials';
 import loginpage from '../pages/loginPage';
 
+//Roles that are used to login to the site
 class roles{
     invalidUser= Role(PAGE.URL, async t=>{
         await loginpage.loginMethod(CREDENTIALS.INVALID_USER.USERNAME, CREDENTIALS.INVALID_USER.PASSWORD)

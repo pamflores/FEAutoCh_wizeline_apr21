@@ -2,7 +2,7 @@ import {Selector, t} from 'testcafe'
 
 class loginpage{
 
-    //Create selectors
+    //Selectors
     constructor(){
         this.username_txtbox = Selector('#user-name');
         this.password_txtbox = Selector('#password');
@@ -20,13 +20,13 @@ class loginpage{
 
     }
 
-    //Return the error message when invalid user is introduced
+    
     async getErrorMsg(){
-        return await this.error_msg.innerText
+        return await this.error_msg.innerText //Return the error message when invalid user is introduced
     }
 
     async existsLoginBtn(){
-        return await this.login_btn.exists;
+        return await this.login_btn.exists; //Verify login button exists in the page. Used for assertions
     }
     
 }

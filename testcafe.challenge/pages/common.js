@@ -1,5 +1,6 @@
 import {Selector, t} from 'testcafe'
 
+// Common actions throught the site pages
 class common{
 
     constructor(){
@@ -20,7 +21,6 @@ class common{
         await this.clickBurguerBtn();
         await this.clickLogoutLink();
     }
-
 
     async openCart(){
         await t.click(this.cartbtn);

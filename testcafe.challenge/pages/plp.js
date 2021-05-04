@@ -15,7 +15,7 @@ class productListing{
     async returnPLPtitle() {
         return await this.plpTitle.innerText;
     }
-
+// Sort PLP by certain option
     async sortBy(option){
         await t.click(this.sortCombo)
                 .click((new selectOption(option).option))
@@ -32,10 +32,11 @@ class productListing{
     async goToCart(){
         await t.click(this.cart)
     }
+
     async addItemToCart(prod){
-        this.selectProduct(prod)
+        await this.selectProduct(prod)
         await productDetails.addItemToCart()
-        await t.expect(await productDetails.returnBtnText()).eql(PAGE.BUTTONS.REMOVE)
+        await t.expect(await productDetails.returnBtnText()).eql(PAGE.BUTTONS.REMOVE) //Assertion
     }
 }
 

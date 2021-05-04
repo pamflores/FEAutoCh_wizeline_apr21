@@ -14,7 +14,7 @@ test(`Checkout Finish`, async t => {
     await common.openCart()
     await shoppingCart.clickCheckoutbtn()
     await checkoutNames.addNames(PAGE.NAMES.FIRST_NAME,PAGE.NAMES.LAST_NAME,PAGE.NAMES.POSTAL_CODE)
-    await t.expect(await checkoutNames.returnShippingLbl()).eql(PAGE.LABELS.PAYMENT)
+    await t.expect(await checkoutNames.returnPaymentLbl()).eql(PAGE.LABELS.PAYMENT) //Assertion
     await checkoutNames.finish()
-    await t.expect(await finish.returnFinishLbl()).eql(PAGE.LABELS.THANK_YOU)
+    await t.expect(await finish.returnFinishLbl()).eql(PAGE.LABELS.THANK_YOU)//Assertion
 });

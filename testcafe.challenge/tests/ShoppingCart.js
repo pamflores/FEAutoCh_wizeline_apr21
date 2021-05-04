@@ -13,8 +13,6 @@ fixture `Product Details Page Testing`
     .page(PAGE.URL).beforeEach(async t=>{ await t.useRole(roles.validUser)}) 
 
 test(`Verify Products were added to the Cart`, async t => {
-    await t.useRole(roles.validUser)
-    await t.expect(await productListing.returnPLPtitle()).eql(PAGE.PAGETITLES.PRODUCTLIST)
     await productListing.addItemToCart(PAGE.PRODUCTS.LIGHT)
     await productDetails.returntoPLP()
     await productListing.addItemToCart(PAGE.PRODUCTS.BACKPACK)

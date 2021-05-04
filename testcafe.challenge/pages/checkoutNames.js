@@ -8,10 +8,11 @@ class checkoutNames{
         this.lastNameText = Selector('#last-name');
         this.zipCodeText = Selector('#postal-code');
         this.continueBtn = Selector('#continue');
-        this.shippingLbl = Selector('.summary_value_label');
+        this.paymentLbl = Selector('.summary_value_label');
         this.finishBtn = Selector('#finish');
     }
 
+// Insert first name, last name and zipcode to the checkout page
     async addNames(first,last,zip){
         await t.typeText(this.firstNameText,first)
             .typeText(this.lastNameText,last)
@@ -19,8 +20,8 @@ class checkoutNames{
             .click(this.continueBtn)
 
     }
-    async returnShippingLbl(){
-        return await this.shippingLbl.innerText;
+    async returnPaymentLbl(){
+        return await this.paymentLbl.innerText; // Return text for payment label. Used for assertion
     }
     async finish(){
         await t.click(this.finishBtn)

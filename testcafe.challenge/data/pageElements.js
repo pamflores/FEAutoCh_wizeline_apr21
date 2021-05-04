@@ -2,7 +2,7 @@ require('dotenv').config();
 import {Selector, t} from 'testcafe'
 
 
-
+//Constant page elements, labels or texts that will serve for assertions in the tests
 export const PAGE = {   
     URL: process.env.URL,
 
